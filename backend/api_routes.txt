@@ -1,0 +1,76 @@
+CAREER ROADMAP GENERATOR - API ROUTES
+
+AUTH ROUTES
+POST   /auth/register         → user signs up
+POST   /auth/login            → user logs in
+POST   /auth/logout           → user logs out
+POST   /auth/refresh-token    → refresh access token
+POST   /auth/forgot-password  → send reset email
+POST   /auth/reset-password   → reset password
+
+USER ROUTES
+GET    /users/{id}            → get user profile
+PUT    /users/{id}            → update user profile
+DELETE /users/{id}            → delete account
+GET    /users/{id}/skills     → get user current skills
+POST   /users/{id}/skills     → add user skills
+PUT    /users/{id}/skills     → update user skills
+
+CAREER PATH ROUTES
+GET    /careers               → get all career paths
+GET    /careers/{id}          → get single career path
+GET    /careers/{id}/skills   → get skills for a career
+GET    /careers/{id}/courses  → get courses for a career
+GET    /careers/{id}/certifications → get certifications for a career
+
+SKILLS ROUTES
+GET    /skills                → get all skills
+GET    /skills/{id}           → get single skill
+GET    /skills/career/{id}    → get skills by career path
+POST   /skills                → add new skill
+PUT    /skills/{id}           → update skill
+DELETE /skills/{id}           → delete skill
+
+COURSES ROUTES
+GET    /courses               → get all courses
+GET    /courses/{id}          → get single course
+GET    /courses/career/{id}   → get courses by career path
+GET    /courses/platform/{name} → get courses by platform
+GET    /courses/difficulty/{level} → get courses by difficulty
+POST   /courses               → add new course
+PUT    /courses/{id}          → update course
+DELETE /courses/{id}          → delete course
+
+ROADMAP ROUTES
+GET    /roadmaps              → get all roadmaps
+GET    /roadmaps/{id}         → get single roadmap
+GET    /roadmaps/user/{id}    → get roadmaps for a user
+POST   /roadmaps/generate     → generate AI roadmap for user
+PUT    /roadmaps/{id}         → update roadmap
+DELETE /roadmaps/{id}         → delete roadmap
+
+PROGRESS TRACKING ROUTES
+GET    /progress/user/{id}          → get all progress for user
+GET    /progress/user/{id}/summary  → get progress summary
+POST   /progress                    → add progress entry
+PUT    /progress/{id}               → update progress
+DELETE /progress/{id}               → delete progress
+GET    /progress/user/{id}/completed → get completed courses
+GET    /progress/user/{id}/inprogress → get in progress courses
+
+CERTIFICATIONS ROUTES
+GET    /certifications              → get all certifications
+GET    /certifications/{id}         → get single certification
+GET    /certifications/career/{id}  → get certifications by career
+POST   /certifications              → add new certification
+PUT    /certifications/{id}         → update certification
+DELETE /certifications/{id}         → delete certification
+
+AI ROUTES
+POST   /ai/generate-roadmap         → generate personalized roadmap
+POST   /ai/skill-gap-analysis       → analyze skill gaps
+POST   /ai/course-recommendations   → recommend courses
+POST   /ai/resume-analyze           → analyze resume
+POST   /ai/interview-questions      → generate interview questions
+POST   /ai/career-advice            → get AI career advice
+GET    /ai/job-market-trends        → get job market trends
